@@ -11,7 +11,7 @@
 <div class="theTexty">
 {% for val in data %}
 <p> {{val.text}} </p>
-<button id="btnid{{val.id}}"> set </button>
+<button id="btnid{{val.id}}"> {{val.id}} </button>
 <button id="btnid2{{val.id}}"> delete </button>
 {% endfor %}
 
@@ -21,11 +21,14 @@
 for (let index = 1; index < 6; index++) {
     let btns = document.getElementById(`btnid${index}`)
 
+    let store = btns.innerText;
+    console.log(store)
+
     btns.addEventListener('click', ()=>{
 
         console.log(index)
 
-    const nr = index
+    const nr = store
     const xhrs = new XMLHttpRequest();
     xhrs.open("POST","{{ path('index') }}");
     xhrs.setRequestHeader("Content-Type","application/int");
