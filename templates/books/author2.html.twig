@@ -1,0 +1,37 @@
+{% extends "base.html.twig"%}
+
+
+ {% block body %}
+ 
+ 
+ 
+ <p> Lorem ipsum </p>
+
+
+<p id="para"> </p>
+<p> {{data}} </p>
+<p> {{data}} </p>
+<p> {{data}} </p>
+<p> {{data}} </p>
+
+<script> 
+
+
+ console.log(data)
+
+
+ var ll = document.getElementById("para")
+ ll.innerHTML = data
+ 
+
+
+
+</script>
+
+    
+
+ 
+ 
+ 
+ 
+ {% endblock %}

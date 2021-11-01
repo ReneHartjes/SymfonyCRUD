@@ -1,0 +1,11 @@
+new:
+  path: /
+  controller: App\Controller\MyController::index
+
+index:
+  path: /123abc
+  controller: App\Controller\NewController::index2
+
+dele:
+  path: /1234abcd
+  controller: App\Controller\DelController::index3
